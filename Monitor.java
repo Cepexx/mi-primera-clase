@@ -37,4 +37,9 @@ public class Monitor{
     public void imprimeDetalles(){
         System.out.println("Marca: " + marca + " | Precio: " + precio + " | Está en venta: " + enVenta);
     }
+    
+    public String stringDetalles(){
+       String resumen = marca + precio + enVenta;
+       return resumen;
+    }
 }
