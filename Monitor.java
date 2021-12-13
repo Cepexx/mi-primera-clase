@@ -17,16 +17,24 @@ public class Monitor{
     public float showPrecio(){
         return precio;
     }
-    
-    public void changeHealth(float nuevoPrecio){
-        precio = nuevoPrecio;
-    }
-    
-    public boolean estaEnVenta(){
+
+    public boolean showEnVenta(){
         return enVenta;
     }
+    
+    public void subirPrecio(float nuevoPrecio){
+        precio = precio + nuevoPrecio;
+    }
 
-    public void ponerEnVenta(boolean estaEnVenta){
-        enVenta = estaEnVenta;
+    public void ponerEnVenta(){
+        if(enVenta){
+            enVenta = false;
+        }else{
+            enVenta= true;
+        }
+    }
+    
+    public void imprimeDetalles(){
+        System.out.println("Marca: " + marca + " | Precio: " + precio + " | Está en venta: " + enVenta);
     }
 }
